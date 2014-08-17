@@ -9,8 +9,10 @@
 using namespace png;
  
 int main(int nNumberofArgs, char *pszArgs[]) {
-  
-  png::image< png::rgb_pixel > image("image.png");
+
+  const char *filename;
+  filename=pszArgs[1];
+  png::image< png::rgb_pixel > image(filename);
   png::image< png::rgb_pixel > image1(image.get_width()/2,image.get_height()/2);
   std::cout<<"inaltimea imagini: "<<image.get_height()<<"\n";
   std::cout<<"lungimea imagini: "<<image.get_width()<<"\n";
@@ -31,6 +33,6 @@ int main(int nNumberofArgs, char *pszArgs[]) {
 		}
 	  }
     
- image.write("alphablending.png");
- image1.write("minuscul.png");
+ image.write(filename);
+ //image1.write("minuscul.png");
 }
