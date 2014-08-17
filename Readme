@@ -1,3 +1,7 @@
 alphablending
 
 application for performing alphablending
+
+Run command on terminal to compile:
+
+g++ alphablendingplus.cpp -lpng -o alphablendingplus
